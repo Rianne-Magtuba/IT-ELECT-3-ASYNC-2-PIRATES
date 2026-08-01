@@ -15,17 +15,22 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
-import pageEvents.flightPageEvents;
-import pageEvents.loginPageEvents;
-import pageEvents.registerPageEvents;
+import pageEvents.HomePageEvents;
+import pageEvents.signup_Login_PageEvents;
+import pageEvents.signupPageEvents;
+
 
 public class DemoGuruTestCases extends BaseTest{
     String browser;
-    Dictionary<String, String> registerDetails;
-    registerPageEvents registerPage = new registerPageEvents();
-    loginPageEvents loginPage = new loginPageEvents();
-    flightPageEvents flightPage = new flightPageEvents();
-
+    Dictionary<String, String> signupDetails;
+    // registerPageEvents registerPage = new registerPageEvents();
+    // loginPageEvents loginPage = new loginPageEvents();
+    // flightPageEvents flightPage = new flightPageEvents();
+       HomePageEvents homePageEvents = new HomePageEvents();
+       signup_Login_PageEvents signUp_Login_PageEvents = new signup_Login_PageEvents();
+       signupPageEvents signupPageEvents = new signupPageEvents();
+      
+            
     @BeforeTest(alwaysRun = true)
     @Parameters({"browser"})
     public void prepareReport(@Optional("chrome")String browser){
@@ -39,34 +44,48 @@ public class DemoGuruTestCases extends BaseTest{
     }
 
     @Test(priority = 1)
-    public void tc_01_Register(){
-        registerDetails = new Hashtable<>();
-        registerDetails.put("firstName", "Ed");
-        registerDetails.put("lastName", "Dela Cruz");
-        registerDetails.put("phone", "09121234567");
-        registerDetails.put("email", "test@test.com");
-        registerDetails.put("address", "123 Test Way");
-        registerDetails.put("city", "Cavite");
-        registerDetails.put("state", "Metro Manila");
-        registerDetails.put("postalCode", "4114");
-        registerDetails.put("userName", "AutoTest"+generate4Digit());
-        registerDetails.put("password", "Password"+generate4Digit());
-        registerPage.register(registerDetails);
-        registerPage.validateUserRegister(registerDetails);
+    public void signup(){
+       
+        signUp_Login_PageEvents.signUp("Rianne","ghoulllgohul@gmaisl.com");
+        signupDetails = new Hashtable<>();
+
+        signupDetails.put("password", "Password123@asda2");
+        signupDetails.put("day", "1");
+        signupDetails.put("month", "January");
+        signupDetails.put("year", "1990");
+        signupDetails.put("firstName", "Rianne");
+        signupDetails.put("lastName", "Magtuba");
+        signupDetails.put("company", "Test Company");
+        signupDetails.put("address1", "123 Test Way");
+        signupDetails.put("address2", "456 Test Street");
+        signupDetails.put("country", "India");
+        signupDetails.put("state", "Test State");
+        signupDetails.put("city", "Test City");
+        signupDetails.put("zipcode", "1234");
+        signupDetails.put("mobileNumber", "09123456789");
+        signupPageEvents.fillUpSignUpForm(signupDetails);
+      
+       homePageEvents.verifyUserIsLoggedIn();
+       //delete temporarily
+      // homePageEvents.clickDeleteAccountButton(); 
+      
+        
 
     }
+
 
     @Test(priority = 2)
     public void tc_02_Login(){
-        loginPage.login(registerDetails);
-    
+        signUp_Login_PageEvents.Login("ghoulllgohul@gmaisl.com", "Password123@asda2");
+   homePageEvents.verifyUserIsLoggedIn();
+     homePageEvents.clickDeleteAccountButton(); 
     }
 
-    @Test(priority = 3)
-    public void tc_03_Reservation(){
-        flightPage.reserveFlight();
+    // @Test(priority = 3)
+    // public void tc_03_Reservation(){
+    //     flightPage.reserveFlight();
     
-    }
+    // }
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod(ITestResult result){

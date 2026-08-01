@@ -6,6 +6,7 @@ import pageObjects.loginPageElements;
 
 public class loginPageEvents extends BaseTest{
 
+   
     public void clickRegisterTab(){
         logger.info("Click Register tab");
         click(loginPageElements.tabRegister);
