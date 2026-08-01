@@ -51,6 +51,15 @@ import utils.ElementFetch;
 		public static ExtentTest logger;
 		ElementFetch ele = new ElementFetch();
 		
+		public static boolean enableLogging = true; 
+
+  
+    public void logInfo(String message) {
+        
+        if (enableLogging && logger != null) {
+            logger.info(message);
+        }
+    }
 	public void beforeTestMethod(String browser) {
 		String reportname = "REGRESSION_" + browser.toUpperCase();
 		reportname = reportname.replace("-HEADLESS", "");

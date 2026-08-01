@@ -43,10 +43,8 @@ public class DemoGuruTestCases extends BaseTest{
         initializeBrowser(browser, testMethod);
     }
 
-    @Test(priority = 1)
-    public void signup(){
-       
-        signUp_Login_PageEvents.signUp("Rianne","ghoulllgohul@gmaisl.com");
+    public void createAccount(String name, String email){
+ signUp_Login_PageEvents.signUp(name,email);
         signupDetails = new Hashtable<>();
 
         signupDetails.put("password", "Password123@asda2");
@@ -65,9 +63,29 @@ public class DemoGuruTestCases extends BaseTest{
         signupDetails.put("mobileNumber", "09123456789");
         signupPageEvents.fillUpSignUpForm(signupDetails);
       
-       homePageEvents.verifyUserIsLoggedIn();
-       //delete temporarily
-      // homePageEvents.clickDeleteAccountButton(); 
+       
+    }
+
+   public void createAccountAndLogout(String name, String email) {
+    
+    BaseTest.enableLogging = false; 
+    
+    try {
+        
+        createAccount(name, email);
+        homePageEvents.logoutUser();
+        signUp_Login_PageEvents.goToHomepage();
+    } finally {
+        
+        BaseTest.enableLogging = true; 
+    }
+}
+
+    @Test(priority = 1)
+    public void tc_01_registerUser(){
+        createAccount("Rianne", "ghoulllgohasdauldas"+generate4Digit()+"@gmaisl.com" );
+        homePageEvents.verifyUserIsLoggedIn();
+        homePageEvents.clickDeleteAccountButton(); 
       
         
 
@@ -75,17 +93,37 @@ public class DemoGuruTestCases extends BaseTest{
 
 
     @Test(priority = 2)
-    public void tc_02_Login(){
-        signUp_Login_PageEvents.Login("ghoulllgohul@gmaisl.com", "Password123@asda2");
+    public void tc_02_LoginSuccesfully(){
+        String email = "ghoulllgohasdauldsasdasas@gmaislasds.com";
+      createAccountAndLogout("Rianne", email);
+        signUp_Login_PageEvents.loginSuccessfully(email, "Password123@asda2");
    homePageEvents.verifyUserIsLoggedIn();
-     homePageEvents.clickDeleteAccountButton(); 
+   homePageEvents.clickDeleteAccountButton(); 
+    }
+    @Test(priority = 3)
+    public void tc_03_LoginWithIncorrectEmailAndPass(){
+      String email = "ghoulllgo" + generate4Digit() +"@gmaislasds.com";
+        createAccountAndLogout("Rianne",email);
+        signUp_Login_PageEvents.loginExpectingError(email, "INCORERCT@asda2");
+
     }
 
-    // @Test(priority = 3)
-    // public void tc_03_Reservation(){
-    //     flightPage.reserveFlight();
+    @Test(priority = 4)
+    public void tc_04_LogoutUser(){
+   String email = "ghoulllgo" + generate4Digit() +"@gmaislasds.com";
+        createAccountAndLogout("Rianne",email);
+       
+       signUp_Login_PageEvents.loginSuccessfully(email, "Password123@asda2");
+       
+        homePageEvents.verifyUserIsLoggedIn();
+
+        homePageEvents.logoutUser();
+
+        signUp_Login_PageEvents.enter_login_info_visible();
+    }
+
+
     
-    // }
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod(ITestResult result){

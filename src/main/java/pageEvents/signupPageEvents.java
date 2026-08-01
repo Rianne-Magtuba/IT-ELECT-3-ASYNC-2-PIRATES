@@ -13,7 +13,7 @@ public class signupPageEvents extends BaseTest{
     accountInfoVisible();
     
     //Enter Account Information
-        logger.info("Fill details: Title, Name, Email, Password, Date of birth");
+        logInfo("Fill details: Title, Name, Email, Password, Date of birth");
        
            click(signUpPageElements.tittle_Mr);
    
@@ -25,11 +25,11 @@ public class signupPageEvents extends BaseTest{
         selectElementByVisibleText(signUpPageElements.DOB_MONTH, registerDetails.get("month").toString());
         selectElementByVisibleText(signUpPageElements.DOB_YEAR, registerDetails.get("year").toString());
 
- logger.info("Select checkbox 'Sign up for our newsletter!'");
+ logInfo("Select checkbox 'Sign up for our newsletter!'");
         click(signUpPageElements.NEWSLETTER_CHECKBOX);
-logger.info(" Select checkbox 'Receive special offers from our partners!'");
+logInfo(" Select checkbox 'Receive special offers from our partners!'");
         click(signUpPageElements.SPECIAL_OFFERS_CHECKBOX);
-        logger.info("Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number");
+        logInfo("Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number");
         clear(signUpPageElements.FIRST_NAME);
         sendKeys(signUpPageElements.FIRST_NAME, registerDetails.get("firstName").toString());
 
@@ -56,7 +56,7 @@ logger.info(" Select checkbox 'Receive special offers from our partners!'");
         clear(signUpPageElements.MOBILE_NUMBER);
         sendKeys(signUpPageElements.MOBILE_NUMBER, registerDetails.get("mobileNumber").toString());
 
-        logger.info("Click Create Account button");
+        logInfo("Click Create Account button");
         click(signUpPageElements.CREATE_ACCOUNT_BUTTON);
 
         clickContinueButton();
@@ -65,18 +65,20 @@ logger.info(" Select checkbox 'Receive special offers from our partners!'");
     }
 
     public void accountInfoVisible(){
-        logger.info("Verify that 'ENTER ACCOUNT INFORMATION' is visible");
+        logInfo("Verify that 'ENTER ACCOUNT INFORMATION' is visible");
         assertElementIsDisplayed(signUpPageElements.ENTER_ACCOUNT_INFORMATION_TEXT);
     }
     
 
     public void validateUserRegister(){
-        logger.info("Validate that 'ACCOUNT CREATED!' is visible");
+        logInfo("Validate that 'ACCOUNT CREATED!' is visible");
         assertElementIsDisplayed(signUpPageElements.ACCOUNT_CREATED_TEXT);
     }
     public void clickContinueButton(){
-        logger.info("Click Continue button");
+        logInfo("Click Continue button");
         click(signUpPageElements.CONTINUE_BUTTON);
     }
+
+  
 
 }
