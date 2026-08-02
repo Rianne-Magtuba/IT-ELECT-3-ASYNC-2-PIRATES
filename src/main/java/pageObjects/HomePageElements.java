@@ -14,5 +14,5 @@ public interface HomePageElements {
 //CONFIRMATION PAGE
     String CONTINUE_DELETE_ACCOUNT_BUTTON = "//a[@class='btn btn-primary']";
     String NEXT_IMAGE_BUTTON ="//a[@class='right control-carousel hidden-xs']//i[@class='fa fa-angle-right']";
-
+    String CAROUSEL_SLIDER = "//div[@id='slider-carousel']";
 }

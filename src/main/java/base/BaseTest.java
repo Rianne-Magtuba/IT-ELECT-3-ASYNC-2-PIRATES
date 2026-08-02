@@ -151,6 +151,7 @@ import utils.ElementFetch;
 		switch(browser) {
 		case "chrome":
 			ChromeOptions options = new ChromeOptions();
+			 options.addArguments("--incognito");
 			options.addArguments("window-size=1980x1080");
 			options.addArguments("--window-position=-2400,-2400");
 			options.addArguments("--disable-gpu"); 
@@ -169,6 +170,7 @@ import utils.ElementFetch;
 	        options.addArguments("--disable-gpu");
 	        options.addArguments("disable-infobars");
 	        options.addArguments("--disable-extensions");
+			options.addArguments("--disable-popup-blocking");
 	        options.setCapability("acceptInsecureCerts",true);
 			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver(options);

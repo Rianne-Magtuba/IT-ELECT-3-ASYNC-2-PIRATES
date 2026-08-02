@@ -42,7 +42,7 @@ logInfo("Click Sign Up button");
     }
 
     public void enterLoginCredentialsAndSubmit(String email, String password) {
-    homePageEvents.homepageIsDisplayed();
+    homePageEvents.homepageIsDisplayedVer2();
     homePageEvents.clickSignUpLoginButton();
 
     logInfo("Fill Up Login Form with Email: " + email);
@@ -55,6 +55,7 @@ logInfo("Click Sign Up button");
     logInfo("Click Login button");
     click(signUp_LoginPageElements.LOGIN_BUTTON);
 }
+    
     public void loginSuccessfully(String email, String password){
       enterLoginCredentialsAndSubmit(email, password);
     
@@ -78,4 +79,20 @@ public void loginExpectingError(String email, String password) {
       public void goToHomepage(){
       click(signUp_LoginPageElements.HOMEPAGE_BTN);
     }
+
+public void fillSignUpForm(String name, String email){
+    enter_account_info_visible();
+
+    logInfo("Fill Up Sign Up Form");
+    clear(signUp_LoginPageElements.NAME_INPUT);
+    sendKeys(signUp_LoginPageElements.NAME_INPUT, name);
+
+    clear(signUp_LoginPageElements.EMAIL_INPUT);
+    sendKeys(signUp_LoginPageElements.EMAIL_INPUT, email);
+
+    logInfo("Click Sign Up button");
+    click(signUp_LoginPageElements.SIGNUP_BUTTON);
+}
+
+
 }
