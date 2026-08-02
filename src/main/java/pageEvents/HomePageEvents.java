@@ -1,14 +1,28 @@
 package pageEvents;
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import base.BaseTest;
 import pageObjects.HomePageElements;
 
 public class HomePageEvents extends BaseTest {
 
-    public void homepageIsDisplayed() {
+   public void homepageIsDisplayed() {
         logInfo("Verify that home page is visible successfully");
-
-      assertElementIsDisplayed(HomePageElements.NEXT_IMAGE_BUTTON);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(HomePageElements.NEXT_IMAGE_BUTTON)));
+        assertElementIsDisplayed(HomePageElements.NEXT_IMAGE_BUTTON);
     }
+
+public void homepageIsDisplayedVer2() {
+    logInfo("Verify that home page is visible successfully");
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(HomePageElements.SIGNUP_LOGIN_BUTTON)));
+    assertElementIsDisplayed(HomePageElements.SIGNUP_LOGIN_BUTTON);
+}
 
     public void clickSignUpLoginButton() {
         logInfo("Click Sign Up / Login button");
