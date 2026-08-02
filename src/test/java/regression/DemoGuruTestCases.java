@@ -5,7 +5,6 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.concurrent.TimeoutException;
 
-import org.apache.hc.core5.util.Timeout;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,21 +14,26 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
-import pageEvents.HomePageEvents;
-import pageEvents.signup_Login_PageEvents;
-import pageEvents.signupPageEvents;
+import pageEvents.*;
+
+
 
 
 public class DemoGuruTestCases extends BaseTest{
     String browser;
+
     Dictionary<String, String> signupDetails;
+        Dictionary<String,String> contactUsDetails;
+
+
     // registerPageEvents registerPage = new registerPageEvents();
-    // loginPageEvents loginPage = new loginPageEvents();
-    // flightPageEvents flightPage = new flightPageEvents();
-       HomePageEvents homePageEvents = new HomePageEvents();
+    
+      HomePageEvents homePageEvents = new HomePageEvents();
        signup_Login_PageEvents signUp_Login_PageEvents = new signup_Login_PageEvents();
        signupPageEvents signupPageEvents = new signupPageEvents();
-      
+       contactUsPageEvents contactUsPageEvents = new contactUsPageEvents();
+        testCasePageEvents testCasePageEvents = new testCasePageEvents();
+        productPageEvents productPageEvents = new productPageEvents();
             
     @BeforeTest(alwaysRun = true)
     @Parameters({"browser"})
@@ -108,11 +112,12 @@ public class DemoGuruTestCases extends BaseTest{
 
     }
 
+    String _email = "";
     @Test(priority = 4)
     public void tc_04_LogoutUser(){
    String email = "ghoulllgo" + generate4Digit() +"@gmaislasds.com";
         createAccountAndLogout("Rianne",email);
-       
+        _email = email;
        signUp_Login_PageEvents.loginSuccessfully(email, "Password123@asda2");
        
         homePageEvents.verifyUserIsLoggedIn();
@@ -122,9 +127,37 @@ public class DemoGuruTestCases extends BaseTest{
         signUp_Login_PageEvents.enter_login_info_visible();
     }
 
-
+    @Test(priority = 5)
+    public void tc_05_SignUpWithExistingEmail(){
+        signUp_Login_PageEvents.signUpWithExistingEmail("Rianne", _email);
+    }
     
+    @Test(priority = 6)
+    public void tc_06_ContactUsForm(){
+        contactUsDetails = new Hashtable<>();
+        contactUsDetails.put("name", "Rianne");
+        contactUsDetails.put("email", "ghoulllgohasdauldas"+generate4Digit()+"@gmaisl.com");
+        contactUsDetails.put("subject", "Test Subject");
+        contactUsDetails.put("message", "Test Message");
+        System.out.println(">>> TEST METHOD STARTED: " + Thread.currentThread().getStackTrace()[1].getMethodName());
+        contactUsPageEvents.fillContactUsForm(contactUsDetails);
+    }
 
+
+    @Test(priority = 7)
+    public void tc_07_TestCasesPage(){
+        testCasePageEvents.navigateToTestCasesPage();
+    }
+
+    @Test(priority = 8 )
+    public void tc_08_ProductPage(){
+        productPageEvents.productListIsVisible(); 
+    }
+    @Test(priority = 9)
+    public void tc_09_SearchProduct(){
+        productPageEvents.searchForProduct("top");
+    }
+    
     @AfterMethod(alwaysRun = true)
     public void afterMethod(ITestResult result){
         afterMethod(result, browser);

@@ -16,7 +16,7 @@ public interface signUp_LoginPageElements {
      String NAME_INPUT = "//input[@placeholder='Name']";
      String EMAIL_INPUT = "//input[@data-qa='signup-email']";
      String SIGNUP_BUTTON = "//button[normalize-space()='Signup']";
-
+     String SignUpWithExistingEmail_ERROR_POPUP = "//p[normalize-space()='Email Address already exist!']";
      String NEW_USER_SIGNUP_TEXT = "//h2[normalize-space()='New User Signup!']";
 
      //NAV

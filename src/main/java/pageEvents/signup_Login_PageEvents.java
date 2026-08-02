@@ -27,6 +27,14 @@ logInfo("Click Sign Up button");
     }
     
 
+    public void signUpWithExistingEmail(String name, String email){
+        signUp(name, email);
+        logInfo("Verify error 'Email Address already exist!' is visible");
+ assertElementIsDisplayed(signUp_LoginPageElements.SignUpWithExistingEmail_ERROR_POPUP);
+    }
+
+
+
      public void enter_account_info_visible() {
         logInfo("Verify 'New User Signup!' is visible");
 

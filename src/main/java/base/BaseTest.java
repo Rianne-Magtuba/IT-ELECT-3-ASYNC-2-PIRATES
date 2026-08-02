@@ -315,5 +315,40 @@ import utils.ElementFetch;
         Select select = new Select(element);
         select.selectByVisibleText(visibleText);
     }
+
+	public void acceptAlert() {
+        try {
+            logInfo("Waiting for and accepting JavaScript alert");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.alertIsPresent());
+            driver.switchTo().alert().accept(); // Clicks "OK"
+        } catch (Exception e) {
+            logger.fail("Failed to accept alert: " + e.getMessage());
+        }
+    }
+
+    public void dismissAlert() {
+        try {
+            logInfo("Waiting for and dismissing JavaScript alert");
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.alertIsPresent());
+            driver.switchTo().alert().dismiss(); // Clicks "Cancel"
+        } catch (Exception e) {
+            logger.fail("Failed to dismiss alert: " + e.getMessage());
+        }
+    }
+
+    public String getAlertText() {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.alertIsPresent());
+            String alertMessage = driver.switchTo().alert().getText();
+            logInfo("Alert text retrieved: " + alertMessage);
+            return alertMessage;
+        } catch (Exception e) {
+            logger.fail("Failed to get alert text: " + e.getMessage());
+            return null;
+        }
+    }
 	
 }

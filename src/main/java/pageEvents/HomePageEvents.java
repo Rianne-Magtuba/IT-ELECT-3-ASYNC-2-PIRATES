@@ -36,5 +36,20 @@ public class HomePageEvents extends BaseTest {
         click(HomePageElements.LOGOUT_BUTTON);
     }
 
+    public void clickContactUsButton() {
+        logInfo("Click Contact Us button");
+        click(HomePageElements.CONTACT_US_BUTTON);
+    }
   
+    public void navigateToTestCasesPage() {
+        logInfo("Click Test Cases button");
+        click(HomePageElements.TEST_CASES_BUTTON);
+    }
+   public void navigateToProductPage() {
+        logInfo("Click Products button");
+        click(HomePageElements.PRODUCTS_BUTTON);
+        
+    }
+ 
+
 }
