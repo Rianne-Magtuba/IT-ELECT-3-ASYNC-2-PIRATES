@@ -23,7 +23,6 @@ import pageEvents.PaymentPageEvents;
 import pageEvents.ProductDetailsPageEvents;
 import pageEvents.ProductsPageEvents;
 import pageEvents.contactUsPageEvents;
-import pageEvents.productPageEvents;
 import pageEvents.signupPageEvents;
 import pageEvents.signup_Login_PageEvents;
 import pageEvents.testCasePageEvents;
@@ -45,7 +44,7 @@ public class DemoGuruTestCases extends BaseTest{
        signupPageEvents signupPageEvents = new signupPageEvents();
        contactUsPageEvents contactUsPageEvents = new contactUsPageEvents();
         testCasePageEvents testCasePageEvents = new testCasePageEvents();
-        productPageEvents productPageEvents = new productPageEvents();
+        ProductsPageEvents productPageEvents = new ProductsPageEvents();
         HeaderPageEvents headerPageEvents = new HeaderPageEvents();
     FooterPageEvents footerPageEvents = new FooterPageEvents();
     ProductsPageEvents productsPageEvents = new ProductsPageEvents();
@@ -107,7 +106,7 @@ public class DemoGuruTestCases extends BaseTest{
     @Test(priority = 1)
     public void tc_01_registerUser(){
         createAccount("Rianne", "ghoulllgohasdauldas"+generate4Digit()+"@gmaisl.com" );
-        homePageEvents.verifyUserIsLoggedIn();
+        headerPageEvents.verifyLoggedInAsUsername();
         homePageEvents.clickDeleteAccountButton(); 
       
         
@@ -117,10 +116,12 @@ public class DemoGuruTestCases extends BaseTest{
 
     @Test(priority = 2)
     public void tc_02_LoginSuccesfully(){
-        String email = "ghoulllgohasdauldsasdasas@gmaislasds.com";
+        String email = "ghoulllgohasdauldsa"+generate4Digit()+"dasas@gmaislasds.com";
       createAccountAndLogout("Rianne", email);
+
+      homePageEvents.homepageIsDisplayed();
         signUp_Login_PageEvents.loginSuccessfully(email, "Password123@asda2");
-   homePageEvents.verifyUserIsLoggedIn();
+   headerPageEvents.verifyLoggedInAsUsername();
    homePageEvents.clickDeleteAccountButton(); 
     }
     @Test(priority = 3)
@@ -137,15 +138,18 @@ public class DemoGuruTestCases extends BaseTest{
    String email = "ghoulllgo" + generate4Digit() +"@gmaislasds.com";
         createAccountAndLogout("Rianne",email);
         _email = email;
+        
+        homePageEvents.homepageIsDisplayed();
        signUp_Login_PageEvents.loginSuccessfully(email, "Password123@asda2");
        
-        homePageEvents.verifyUserIsLoggedIn();
+        headerPageEvents.verifyLoggedInAsUsername();
 
         homePageEvents.logoutUser();
 
         signUp_Login_PageEvents.enter_login_info_visible();
     }
 
+    //test can't be run on its own as it needs the initialization of the _email variable from the previous test case. It is dependent on tc_04_LogoutUser to set the _email variable.
     @Test(priority = 5)
     public void tc_05_SignUpWithExistingEmail(){
         signUp_Login_PageEvents.signUpWithExistingEmail("Rianne", _email);
@@ -251,7 +255,7 @@ public class DemoGuruTestCases extends BaseTest{
 
     @Test(priority = 15)
     public void tc15_PlaceOrderRegisterBeforeCheckout(){
-        homePageEvents.homepageIsDisplayedVer2();
+        homePageEvents.homepageIsDisplayed();
         headerPageEvents.clickSignupLoginButton();
 
         signUp_Login_PageEvents.fillSignUpForm("Rianne15", "rianne15_" + generate4Digit() + "@mail.com");
@@ -286,8 +290,9 @@ public void tc16_PlaceOrderLoginBeforeCheckout(){
 
     createAccountAndLogout("Rianne16", email);
 
-    homePageEvents.homepageIsDisplayedVer2();
+    homePageEvents.homepageIsDisplayed();
     headerPageEvents.clickSignupLoginButton();
+    
     signUp_Login_PageEvents.loginSuccessfully(email, password);
     headerPageEvents.verifyLoggedInAsUsername();
 

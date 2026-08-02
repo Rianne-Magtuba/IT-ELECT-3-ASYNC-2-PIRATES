@@ -6,10 +6,10 @@ import pageObjects.signUp_LoginPageElements;
 public class signup_Login_PageEvents  extends BaseTest{
 
  HomePageEvents homePageEvents = new HomePageEvents();
-
+ HeaderPageEvents headerPageEvents = new HeaderPageEvents();
     public void signUp(String name, String email){
         homePageEvents.homepageIsDisplayed();
-        homePageEvents.clickSignUpLoginButton();
+        headerPageEvents.clickSignupLoginButton();
 
         enter_account_info_visible();
 
@@ -42,8 +42,8 @@ logInfo("Click Sign Up button");
     }
 
     public void enterLoginCredentialsAndSubmit(String email, String password) {
-    homePageEvents.homepageIsDisplayedVer2();
-    homePageEvents.clickSignUpLoginButton();
+    //homePageEvents.homepageIsDisplayed();
+    headerPageEvents.clickSignupLoginButton();
 
     logInfo("Fill Up Login Form with Email: " + email);
     clear(signUp_LoginPageElements.LOGIN_EMAIL_INPUT);
@@ -57,9 +57,10 @@ logInfo("Click Sign Up button");
 }
     
     public void loginSuccessfully(String email, String password){
+
       enterLoginCredentialsAndSubmit(email, password);
-    
-    logInfo("Verify successful login redirect");
+        logInfo("Verify successful login redirect");
+        
     }
 
 public void loginExpectingError(String email, String password) {
