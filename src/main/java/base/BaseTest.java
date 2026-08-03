@@ -177,42 +177,42 @@ import utils.ElementFetch;
 	public void setupDriver(String browser) {
 		switch(browser) {
 		case "chrome":
-			ChromeOptions options = new ChromeOptions();
+            ChromeOptions options = new ChromeOptions();
 
+            String downloadPath = System.getProperty("user.dir") + "src/test/resources/uBlock-Origin-Lite-Chrome-Web-Store.crx";
 
+            Map<String, Object> prefs = new HashMap<>();
+            prefs.put("download.default_directory", downloadPath);
+            prefs.put("download.prompt_for_download", false);
+            prefs.put("download.directory_upgrade", true);
+            prefs.put("safebrowsing.enabled", true);
 
-		
+            options.setExperimentalOption("prefs", prefs);
 
+            options.addArguments("--incognito");
+            options.addArguments("window-size=1980x1080");
+            options.addArguments("--window-position=-2400,-2400");
+            options.addArguments("--disable-gpu"); 
+            options.addArguments("--no-sandbox"); 
+            options.addArguments("--disable-dev-shm-usage"); 
+            options.addArguments("--disable-site-isolation-trials");
+            options.addArguments("--lang=en");
+            options.addArguments("--disable-web-security");
+            options.addArguments("--allow-running-insecure-content");
+            options.addArguments("--disable-infobars");
+            options.addArguments("--disable-extensions");
+            
+            // The Ad-Blocker: Reroutes ad traffic into the void
+            options.addArguments("--host-rules="
+                    + "MAP *googleads* 127.0.0.1, "
+                    + "MAP *doubleclick.net 127.0.0.1, "
+                    + "MAP *adservice.google.com 127.0.0.1, "
+                    + "MAP *googlesyndication.com 127.0.0.1");
 
-			Map<String, Object> prefs = new HashMap<>();
-			prefs.put("download.default_directory", downloadPath);
-			prefs.put("download.prompt_for_download", false);
-			prefs.put("download.directory_upgrade", true);
-			prefs.put("safebrowsing.enabled", true);
-
-			options.setExperimentalOption("prefs", prefs);
-
-			options.addArguments("--incognito");
-			options.addArguments("window-size=1980x1080");
-			options.addArguments("--window-position=-2400,-2400");; 
-	        options.addArguments("--no-sandbox"); 
-	        options.addArguments("--disable-dev-shm-usage"); 
-	        options.addArguments("-disable-site-isolation-trials");
-	        options.addArguments("--lang=en");
-	        options.addArguments("--disable-web-security");
-	        options.addArguments("--allow-running-insecure-content");
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("disable-infobars");
-	        options.addArguments("--disable-extensions");
-
-	        options.addArguments("--allow-running-insecure-content");
-	        options.addArguments("disable-infobars");
-	        options.addArguments("--disable-extensions");
-			options.addArguments("--disable-popup-blocking");
-	        options.setCapability("acceptInsecureCerts",true);
-			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver(options);
-			break;
+            options.setCapability("acceptInsecureCerts",true);
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver(options);
+            break;
 			
 		case "chrome-headless":
 			options = new ChromeOptions();
