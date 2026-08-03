@@ -1,5 +1,7 @@
 package pageEvents;
 
+import org.openqa.selenium.JavascriptExecutor;
+
 import base.BaseTest;
 import pageObjects.HeaderElements;
 
@@ -8,6 +10,11 @@ public class HeaderPageEvents extends BaseTest {
     public void clickHomeButton() {
         logger.info("Click 'Home' button");
         click(HeaderElements.HOME_BUTTON);
+    }
+
+    public void scrollToHeader() {
+        logger.info("Scroll up to header");
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
     }
 
     public void clickProductsButton() {

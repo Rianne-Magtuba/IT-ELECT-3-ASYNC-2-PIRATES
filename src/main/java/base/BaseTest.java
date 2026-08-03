@@ -9,6 +9,8 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Random;
 import org.openqa.selenium.WebElement;
@@ -141,6 +143,31 @@ import utils.ElementFetch;
         }
 		
 	}
+	public String getText(String xpath) {
+    	return driver.findElement(By.xpath(xpath)).getText();
+	}
+
+	public boolean isFileDownloaded(String fileName) {
+
+    String downloadPath = System.getProperty("user.home")
+            + File.separator + "Downloads";
+
+    File folder = new File(downloadPath);
+
+    File[] files = folder.listFiles();
+
+    if (files == null) {
+        return false;
+    }
+
+    for (File file : files) {
+        if (file.getName().equals(fileName)) {
+            return true;
+        }
+    }
+
+    return false;
+}
 	
 	@AfterTest
 	public void afterTest() {
@@ -151,7 +178,18 @@ import utils.ElementFetch;
 		switch(browser) {
 		case "chrome":
 			ChromeOptions options = new ChromeOptions();
-			 options.addArguments("--incognito");
+
+			String downloadPath = System.getProperty("user.dir") + File.separator + "downloads";
+
+			Map<String, Object> prefs = new HashMap<>();
+			prefs.put("download.default_directory", downloadPath);
+			prefs.put("download.prompt_for_download", false);
+			prefs.put("download.directory_upgrade", true);
+			prefs.put("safebrowsing.enabled", true);
+
+			options.setExperimentalOption("prefs", prefs);
+
+			options.addArguments("--incognito");
 			options.addArguments("window-size=1980x1080");
 			options.addArguments("--window-position=-2400,-2400");
 			options.addArguments("--disable-gpu"); 
@@ -178,6 +216,7 @@ import utils.ElementFetch;
 			
 		case "chrome-headless":
 			options = new ChromeOptions();
+
 			options.addArguments("headless");
 			options.addArguments("window-size=1980x1080");
 			options.addArguments("--window-position=-2400,-2400");
