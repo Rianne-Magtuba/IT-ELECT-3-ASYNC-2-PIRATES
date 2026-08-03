@@ -18,8 +18,6 @@ public class HomePageEvents extends BaseTest {
     }
 
 
- 
-
     public void verifyUserIsDeleted() {
         logInfo("Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button");
         assertElementIsDisplayed(HomePageElements.CONTINUE_DELETE_ACCOUNT_BUTTON);
@@ -46,6 +44,25 @@ public class HomePageEvents extends BaseTest {
         click(HomePageElements.TEST_CASES_BUTTON);
     }
   
- 
+    public void verifyRecommendedItemsSectionIsDisplayed() {
+        logInfo("Verify that 'RECOMMENDED ITEMS' is visible");
+        assertElementIsDisplayed(HomePageElements.RECOMENDED_ITEMS_LABEL);
+    }
+
+    public void clickAddToCartRecommendedItemButton() {
+        logInfo("Click 'Add to cart' button for recommended item");
+        click(HomePageElements.ADD_TO_CART_RECOMMENDED_ITEM_BUTTON);
+        click(HomePageElements.CONTINUE_SHOPPING_BUTTON);
+    }
+
+    public void clickArrowUpButton() {
+        logInfo("Click 'Arrow Up' button");
+        click(HomePageElements.ARROW_UP_BUTTON);
+    }
+
+    public void verifyTopOfTheScreenTextIsVisible() {
+        logInfo("Verify that 'Full-Fledged practice website for Automation Engineers' is visible");
+        assertElementIsDisplayed(HomePageElements.TOP_OF_THE_SCREEN_TEXT);
+    }
 
 }
