@@ -179,7 +179,10 @@ import utils.ElementFetch;
 		case "chrome":
 			ChromeOptions options = new ChromeOptions();
 
-			String downloadPath = System.getProperty("user.dir") + File.separator + "downloads";
+
+
+		
+
 
 			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("download.default_directory", downloadPath);
@@ -191,8 +194,7 @@ import utils.ElementFetch;
 
 			options.addArguments("--incognito");
 			options.addArguments("window-size=1980x1080");
-			options.addArguments("--window-position=-2400,-2400");
-			options.addArguments("--disable-gpu"); 
+			options.addArguments("--window-position=-2400,-2400");; 
 	        options.addArguments("--no-sandbox"); 
 	        options.addArguments("--disable-dev-shm-usage"); 
 	        options.addArguments("-disable-site-isolation-trials");
@@ -202,10 +204,8 @@ import utils.ElementFetch;
 	        options.addArguments("--disable-gpu");
 	        options.addArguments("disable-infobars");
 	        options.addArguments("--disable-extensions");
-	        options.addArguments("--lang=en");
-	        options.addArguments("--disable-web-security");
+
 	        options.addArguments("--allow-running-insecure-content");
-	        options.addArguments("--disable-gpu");
 	        options.addArguments("disable-infobars");
 	        options.addArguments("--disable-extensions");
 			options.addArguments("--disable-popup-blocking");

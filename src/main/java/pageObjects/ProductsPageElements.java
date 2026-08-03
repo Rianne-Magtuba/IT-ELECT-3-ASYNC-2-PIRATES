@@ -12,7 +12,7 @@ public interface ProductsPageElements {
     String PRODUCT_PRICE = "//span[normalize-space()='Rs. 500']";
     String PRODUCT_AVAILABILITY = "//div[@class='product-details']//p[2]";
     String PRODUCT_CONDITION = "//body//section//p[3]";
-    String PRODUCT_BRAND = "//span[@class='google-anno-t']";
+    String PRODUCT_BRAND = "//body//section//p[4]";
     String SEARCH_BUTTON = "//i[@class='fa fa-search']";
     String SEARCHED_PRODUCTS_HEADER = "//h2[@class='title text-center']";
 

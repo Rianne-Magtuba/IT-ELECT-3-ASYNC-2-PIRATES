@@ -20,10 +20,12 @@ D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\utils\Constants.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageEvents\CartPageEvents.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageEvents\ProductDetailsPageEvents.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageObjects\HomePageElements.java
+D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageObjects\LeftSideBarElements.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageEvents\HeaderPageEvents.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageObjects\contactUsPageELements.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageEvents\PaymentPageEvents.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\utils\SuiteListener.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageObjects\PaymentPageElements.java
+D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageEvents\LeftSideBarPageEvents.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\pageEvents\ProductsPageEvents.java
 D:\Data\Desktop\Automation\STAAutomationDemo\src\main\java\base\BaseTest.java
