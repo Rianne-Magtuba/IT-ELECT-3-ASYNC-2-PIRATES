@@ -25,11 +25,14 @@ public class HeaderPageEvents extends BaseTest {
         click(HeaderElements.SIGNUP_LOGIN_BUTTON);
     }
 
+
     public void verifyLoggedInAsUsername() {
         logger.info("Verify 'Logged in as username' at top");
         assertElementIsDisplayed(HeaderElements.LOGGED_IN_AS_USERNAME);
     }
 
+
+    
 
     
 }
