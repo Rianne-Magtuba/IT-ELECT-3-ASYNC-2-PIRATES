@@ -13,12 +13,15 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.google.common.base.Verify;
+
 import base.BaseTest;
 import pageEvents.CartPageEvents;
 import pageEvents.CheckoutPageEvents;
 import pageEvents.FooterPageEvents;
 import pageEvents.HeaderPageEvents;
 import pageEvents.HomePageEvents;
+import pageEvents.LeftSideBarPageEvents;
 import pageEvents.PaymentPageEvents;
 import pageEvents.ProductDetailsPageEvents;
 import pageEvents.ProductsPageEvents;
@@ -52,6 +55,7 @@ public class DemoGuruTestCases extends BaseTest{
     CartPageEvents cartPageEvents = new CartPageEvents();
     CheckoutPageEvents checkoutPageEvents = new CheckoutPageEvents();
     PaymentPageEvents paymentPageEvents = new PaymentPageEvents();
+    LeftSideBarPageEvents leftSideBarPageEvents = new LeftSideBarPageEvents();
             
     @BeforeTest(alwaysRun = true)
     @Parameters({"browser"})
@@ -66,7 +70,7 @@ public class DemoGuruTestCases extends BaseTest{
     }
 
     public void createAccount(String name, String email){
- signUp_Login_PageEvents.signUp(name,email);
+        signUp_Login_PageEvents.signUp(name,email);
         signupDetails = new Hashtable<>();
 
         signupDetails.put("password", "Password123@asda2");
@@ -322,6 +326,127 @@ public void tc16_PlaceOrderLoginBeforeCheckout(){
         cartPageEvents.verifyCartPageIsDisplayed();
         cartPageEvents.removeFirstProductFromCart();
         cartPageEvents.verifyProductRemovedFromCart();
+    }
+
+    @Test(priority = 18)
+    public void tc18_ViewCategoryProducts(){
+        homePageEvents.homepageIsDisplayed();
+        leftSideBarPageEvents.verifyCategorySectionIsDisplayed();
+        leftSideBarPageEvents.clickWomenCategory();
+        leftSideBarPageEvents.clickWomenDressSubcategory();
+        leftSideBarPageEvents.verifyWomenDressCategoryPage();
+        leftSideBarPageEvents.clickMenCategory();
+        leftSideBarPageEvents.clickMenTshirtsSubcategory();
+        leftSideBarPageEvents.verifyMenTshirtsCategoryPage();
+    }
+
+    @Test(priority = 19)
+    public void tc19_ViewAndCartBrandProducts(){
+        homePageEvents.homepageIsDisplayed();
+        headerPageEvents.clickProductsButton();
+        leftSideBarPageEvents.verifyBrandSectionIsDisplayed();
+        leftSideBarPageEvents.clickPoloBrand();
+        leftSideBarPageEvents.verifyPoloBrandProductsPage();
+        leftSideBarPageEvents.clickMadameBrand();
+        leftSideBarPageEvents.verifyMadameBrandProductsPage();
+    }
+
+    @Test(priority = 20)
+    public void tc20_SearchProductsAndVerifyCartAfterLogin(){
+        String email = "poneldimaguila@gmail.com";
+        productPageEvents.searchForProduct("top");
+        productsPageEvents.hoverAndAddFirstProductToCart();
+        productsPageEvents.clickContinueShoppingButton();
+        productsPageEvents.hoverAndAddSecondProductToCart();
+        productsPageEvents.clickContinueShoppingButton();
+        headerPageEvents.clickCartButton();
+        cartPageEvents.verifyProductsInCart(2);
+        headerPageEvents.clickSignupLoginButton();
+        signUp_Login_PageEvents.loginSuccessfully(email, "123456");
+        headerPageEvents.clickCartButton();
+        cartPageEvents.verifyProductsInCart(2);   
+    }
+
+    @Test(priority = 21)
+    public void tc21_AddReviewOnProduct(){
+        productPageEvents.productListIsVisible(); 
+        productDetailsPageEvents.verifyWriteReviewLabelIsVisible();
+        productDetailsPageEvents.fillUpWriteReview("Niel", "niel" + generate4Digit() + "@mail.com", "This is a test review.");
+    }
+
+    @Test(priority = 22)
+    public void tc22_AddToCartFromRecommendedItems(){
+        homePageEvents.homepageIsDisplayed();
+        homePageEvents.verifyRecommendedItemsSectionIsDisplayed();
+        homePageEvents.clickAddToCartRecommendedItemButton();
+        headerPageEvents.clickCartButton();
+        cartPageEvents.verifyProductsInCart(1);
+    }
+
+    @Test(priority = 23)
+    public void tc23_VerifyAddressDetailsInCheckoutPage(){
+        homePageEvents.homepageIsDisplayed();
+        createAccount("Niel", "nielniel"+generate4Digit()+"@gmaisl.com" );
+        headerPageEvents.verifyLoggedInAsUsername();
+        homePageEvents.homepageIsDisplayed();
+        headerPageEvents.clickProductsButton();
+        productsPageEvents.hoverAndAddFirstProductToCart();
+        productsPageEvents.clickContinueShoppingButton();
+        headerPageEvents.clickCartButton();
+        cartPageEvents.clickProceedToCheckoutButton();
+        checkoutPageEvents.verifyDeliveryAddress(signupDetails);
+        checkoutPageEvents.verifyBillingAddress(signupDetails);
+        homePageEvents.clickDeleteAccountButton();
+        homePageEvents.verifyUserIsDeleted();
+    }
+
+    @Test(priority = 24)
+    public void tc24_DownloadInvoiceAfterPurchaseOrder(){
+        homePageEvents.homepageIsDisplayed();
+        headerPageEvents.clickProductsButton();
+        productsPageEvents.hoverAndAddFirstProductToCart();
+        productsPageEvents.clickContinueShoppingButton();
+        headerPageEvents.clickCartButton();
+        cartPageEvents.verifyCartPageIsDisplayed();
+        cartPageEvents.clickProceedToCheckoutButton();
+        cartPageEvents.clickRegisterLoginButton();
+
+        signUp_Login_PageEvents.fillSignUpForm("Rianne14", "rianne14_" + generate4Digit() + "@mail.com");
+        Dictionary<String, String> details = buildSignupDetails();
+        signupPageEvents.fillUpSignUpForm(details);
+
+        headerPageEvents.verifyLoggedInAsUsername();
+        headerPageEvents.clickCartButton();
+        cartPageEvents.clickProceedToCheckoutButton();
+        checkoutPageEvents.verifyAddressDetailsAndReviewOrder();
+        checkoutPageEvents.enterOrderComment("Please deliver in the morning.");
+        checkoutPageEvents.clickPlaceOrderButton();
+        paymentPageEvents.enterPaymentDetails("Rianne Magtuba", "4111111111111111", "123", "05", "2028");
+        paymentPageEvents.clickPayButton();
+        checkoutPageEvents.verifyOrderSuccessMessage();
+        checkoutPageEvents.clickDownloadInvoiceButton();
+        //checkoutPageEvents.verifyInvoiceDownloaded();
+        checkoutPageEvents.clickContinueButton();
+        homePageEvents.clickDeleteAccountButton();
+        homePageEvents.verifyUserIsDeleted();
+    }
+
+    @Test(priority = 25)
+    public void tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality(){
+        homePageEvents.homepageIsDisplayed();
+        footerPageEvents.scrollToFooter();
+        footerPageEvents.verifySubscriptionTextVisible();
+        homePageEvents.clickArrowUpButton();
+        homePageEvents.verifyTopOfTheScreenTextIsVisible();
+    }
+
+    @Test(priority = 26)
+    public void tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality(){
+        homePageEvents.homepageIsDisplayed();
+        footerPageEvents.scrollToFooter();
+        footerPageEvents.verifySubscriptionTextVisible();
+        headerPageEvents.scrollToHeader();
+        homePageEvents.verifyTopOfTheScreenTextIsVisible();
     }
 
     private Dictionary<String, String> buildSignupDetails(){
