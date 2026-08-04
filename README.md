@@ -1,4 +1,4 @@
-# 🧪 Automation Exercise Test Cases
+# Automation Exercise Test Cases
 
 An automated UI testing project developed as **Asynchronous Laboratory Activity #2** for **IT Elective 3**. This project uses **Selenium WebDriver** with **TestNG** to automate selected test cases from the Automation Exercise website.
 
@@ -42,9 +42,7 @@ The project follows a structured Selenium TestNG framework and generates detaile
 * Maven
 * Selenium WebDriver
 * TestNG
-* Extent Reports
-* WebDriverManager
-* Visual Studio Code / Visual Studio
+* Visual Studio Code 
 * Google Chrome
 * uBlock Origin (recommended to minimize advertisements during test execution)
 
@@ -97,7 +95,7 @@ For example:
 REGRESSION_CHROME.html
 ```
 
-Right-click the report file and select **Open with** → **Google Chrome** (recommended) or any modern web browser.
+Right-click the report file and select **Open with** → **Google Chrome** (recommended).
 
 The report contains:
 
