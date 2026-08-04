@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="regression.DemoGuruTestCases">
+        <methods>
+          <include name="setup"/>
+          <include name="prepareReport"/>
+          <include name="tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality"/>
+          <include name="tc13_VerifyProductQuantityInCart"/>
+          <include name="tc23_VerifyAddressDetailsInCheckoutPage"/>
+          <include name="tc17_RemoveProductsFromCart"/>
+          <include name="tc14_PlaceOrderRegisterWhileCheckout"/>
+          <include name="tc21_AddReviewOnProduct"/>
+          <include name="tc18_ViewCategoryProducts"/>
+          <include name="tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality"/>
+          <include name="tc16_PlaceOrderLoginBeforeCheckout"/>
+          <include name="afterMethod"/>
+          <include name="tc12_AddProductsInCart"/>
+          <include name="afterTest"/>
+          <include name="tc19_ViewAndCartBrandProducts"/>
+          <include name="tc22_AddToCartFromRecommendedItems"/>
+          <include name="tc20_SearchProductsAndVerifyCartAfterLogin"/>
+          <include name="tc15_PlaceOrderRegisterBeforeCheckout"/>
+          <include name="tc24_DownloadInvoiceAfterPurchaseOrder"/>
+        </methods>
+      </class> <!-- regression.DemoGuruTestCases -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
