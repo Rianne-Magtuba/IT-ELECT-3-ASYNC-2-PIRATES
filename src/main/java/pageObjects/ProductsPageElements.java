@@ -21,6 +21,8 @@ public interface ProductsPageElements {
     String CONTINUE_SHOPPING_BUTTON = "//button[normalize-space()='Continue Shopping']";
     String SECOND_PRODUCT_ADD_TO_CART_BUTTON = "(//a[contains(text(),'Add to cart')])[4]";
     String VIEW_CART_BUTTON = "//p[@class='text-center']//a";
-
+    String FIRST_PRODUCT_ADD_TO_CART = "(//div[@class='product-image-wrapper'])[1]//div[@class='product-overlay']//a[contains(@class, 'add-to-cart')]";
+    
+    String SECOND_PRODUCT_ADD_TO_CART = "(//div[@class='product-image-wrapper'])[2]//div[@class='product-overlay']//a[contains(@class, 'add-to-cart')]";
     
 }

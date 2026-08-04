@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="26" passed="26" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-08-04T22:29:01 CST" name="Suite" finished-at="2026-08-04T22:38:23 CST" duration-ms="561522">
+    <groups>
+    </groups>
+    <test started-at="2026-08-04T22:29:01 CST" name="Test" finished-at="2026-08-04T22:38:23 CST" duration-ms="561522">
+      <class name="regression.DemoGuruTestCases">
+        <test-method is-config="true" signature="prepareReport(java.lang.String)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:01 CST" name="prepareReport" finished-at="2026-08-04T22:29:02 CST" duration-ms="474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[${browser}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareReport -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:02 CST" name="setup" finished-at="2026-08-04T22:29:07 CST" duration-ms="5090" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_01_registerUser()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_01_registerUser()[pri:1, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:07 CST" name="tc_01_registerUser" finished-at="2026-08-04T22:29:22 CST" duration-ms="15261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_01_registerUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:22 CST" name="afterMethod" finished-at="2026-08-04T22:29:24 CST" duration-ms="1214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_01_registerUser status=SUCCESS method=DemoGuruTestCases.tc_01_registerUser()[pri:1, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:24 CST" name="setup" finished-at="2026-08-04T22:29:28 CST" duration-ms="4296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_02_LoginSuccesfully()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_02_LoginSuccesfully()[pri:2, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:28 CST" name="tc_02_LoginSuccesfully" finished-at="2026-08-04T22:29:53 CST" duration-ms="25147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_02_LoginSuccesfully -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:53 CST" name="afterMethod" finished-at="2026-08-04T22:29:54 CST" duration-ms="566" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_02_LoginSuccesfully status=SUCCESS method=DemoGuruTestCases.tc_02_LoginSuccesfully()[pri:2, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:54 CST" name="setup" finished-at="2026-08-04T22:29:58 CST" duration-ms="4358" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_03_LoginWithIncorrectEmailAndPass()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_03_LoginWithIncorrectEmailAndPass()[pri:3, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:29:58 CST" name="tc_03_LoginWithIncorrectEmailAndPass" finished-at="2026-08-04T22:30:21 CST" duration-ms="23414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_03_LoginWithIncorrectEmailAndPass -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:30:21 CST" name="afterMethod" finished-at="2026-08-04T22:30:22 CST" duration-ms="740" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_03_LoginWithIncorrectEmailAndPass status=SUCCESS method=DemoGuruTestCases.tc_03_LoginWithIncorrectEmailAndPass()[pri:3, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:30:22 CST" name="setup" finished-at="2026-08-04T22:30:27 CST" duration-ms="5050" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_04_LogoutUser()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_04_LogoutUser()[pri:4, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:30:27 CST" name="tc_04_LogoutUser" finished-at="2026-08-04T22:30:53 CST" duration-ms="26125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_04_LogoutUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:30:53 CST" name="afterMethod" finished-at="2026-08-04T22:30:54 CST" duration-ms="365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_04_LogoutUser status=SUCCESS method=DemoGuruTestCases.tc_04_LogoutUser()[pri:4, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:30:54 CST" name="setup" finished-at="2026-08-04T22:31:22 CST" duration-ms="28350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_05_SignUpWithExistingEmail()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_05_SignUpWithExistingEmail()[pri:5, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:22 CST" name="tc_05_SignUpWithExistingEmail" finished-at="2026-08-04T22:31:28 CST" duration-ms="5934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_05_SignUpWithExistingEmail -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:28 CST" name="afterMethod" finished-at="2026-08-04T22:31:28 CST" duration-ms="495" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_05_SignUpWithExistingEmail status=SUCCESS method=DemoGuruTestCases.tc_05_SignUpWithExistingEmail()[pri:5, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:28 CST" name="setup" finished-at="2026-08-04T22:31:34 CST" duration-ms="5130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_06_ContactUsForm()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_06_ContactUsForm()[pri:6, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:34 CST" name="tc_06_ContactUsForm" finished-at="2026-08-04T22:31:48 CST" duration-ms="14490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_06_ContactUsForm -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:48 CST" name="afterMethod" finished-at="2026-08-04T22:31:50 CST" duration-ms="2169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_06_ContactUsForm status=SUCCESS method=DemoGuruTestCases.tc_06_ContactUsForm()[pri:6, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:50 CST" name="setup" finished-at="2026-08-04T22:31:54 CST" duration-ms="4034" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_07_TestCasesPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_07_TestCasesPage()[pri:7, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:54 CST" name="tc_07_TestCasesPage" finished-at="2026-08-04T22:31:57 CST" duration-ms="3041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_07_TestCasesPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:57 CST" name="afterMethod" finished-at="2026-08-04T22:31:58 CST" duration-ms="305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_07_TestCasesPage status=SUCCESS method=DemoGuruTestCases.tc_07_TestCasesPage()[pri:7, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:31:58 CST" name="setup" finished-at="2026-08-04T22:32:01 CST" duration-ms="3775" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_08_ProductPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_08_ProductPage()[pri:8, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:01 CST" name="tc_08_ProductPage" finished-at="2026-08-04T22:32:06 CST" duration-ms="5047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_08_ProductPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:06 CST" name="afterMethod" finished-at="2026-08-04T22:32:07 CST" duration-ms="400" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_08_ProductPage status=SUCCESS method=DemoGuruTestCases.tc_08_ProductPage()[pri:8, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:07 CST" name="setup" finished-at="2026-08-04T22:32:11 CST" duration-ms="4464" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc_09_SearchProduct()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc_09_SearchProduct()[pri:9, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:11 CST" name="tc_09_SearchProduct" finished-at="2026-08-04T22:32:16 CST" duration-ms="5087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_09_SearchProduct -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:16 CST" name="afterMethod" finished-at="2026-08-04T22:32:17 CST" duration-ms="497" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_09_SearchProduct status=SUCCESS method=DemoGuruTestCases.tc_09_SearchProduct()[pri:9, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:17 CST" name="setup" finished-at="2026-08-04T22:32:21 CST" duration-ms="4331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc10_VerifySubscriptionInHomePage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc10_VerifySubscriptionInHomePage()[pri:10, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:21 CST" name="tc10_VerifySubscriptionInHomePage" finished-at="2026-08-04T22:32:22 CST" duration-ms="393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc10_VerifySubscriptionInHomePage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:22 CST" name="afterMethod" finished-at="2026-08-04T22:32:22 CST" duration-ms="496" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc10_VerifySubscriptionInHomePage status=SUCCESS method=DemoGuruTestCases.tc10_VerifySubscriptionInHomePage()[pri:10, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:22 CST" name="setup" finished-at="2026-08-04T22:32:26 CST" duration-ms="4161" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc11_VerifySubscriptionInCartPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc11_VerifySubscriptionInCartPage()[pri:11, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:26 CST" name="tc11_VerifySubscriptionInCartPage" finished-at="2026-08-04T22:32:29 CST" duration-ms="2718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc11_VerifySubscriptionInCartPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:29 CST" name="afterMethod" finished-at="2026-08-04T22:32:29 CST" duration-ms="354" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc11_VerifySubscriptionInCartPage status=SUCCESS method=DemoGuruTestCases.tc11_VerifySubscriptionInCartPage()[pri:11, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:29 CST" name="setup" finished-at="2026-08-04T22:32:34 CST" duration-ms="4256" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc12_AddProductsInCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc12_AddProductsInCart()[pri:12, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:34 CST" name="tc12_AddProductsInCart" finished-at="2026-08-04T22:32:41 CST" duration-ms="7245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc12_AddProductsInCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:41 CST" name="afterMethod" finished-at="2026-08-04T22:32:41 CST" duration-ms="349" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc12_AddProductsInCart status=SUCCESS method=DemoGuruTestCases.tc12_AddProductsInCart()[pri:12, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:32:41 CST" name="setup" finished-at="2026-08-04T22:33:25 CST" duration-ms="44045" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc13_VerifyProductQuantityInCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc13_VerifyProductQuantityInCart()[pri:13, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:33:25 CST" name="tc13_VerifyProductQuantityInCart" finished-at="2026-08-04T22:33:32 CST" duration-ms="6558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc13_VerifyProductQuantityInCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:33:32 CST" name="afterMethod" finished-at="2026-08-04T22:33:32 CST" duration-ms="378" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc13_VerifyProductQuantityInCart status=SUCCESS method=DemoGuruTestCases.tc13_VerifyProductQuantityInCart()[pri:13, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:33:32 CST" name="setup" finished-at="2026-08-04T22:33:34 CST" duration-ms="1660" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc14_PlaceOrderRegisterWhileCheckout()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc14_PlaceOrderRegisterWhileCheckout()[pri:14, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:33:34 CST" name="tc14_PlaceOrderRegisterWhileCheckout" finished-at="2026-08-04T22:34:11 CST" duration-ms="36963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc14_PlaceOrderRegisterWhileCheckout -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:34:11 CST" name="afterMethod" finished-at="2026-08-04T22:34:11 CST" duration-ms="451" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc14_PlaceOrderRegisterWhileCheckout status=SUCCESS method=DemoGuruTestCases.tc14_PlaceOrderRegisterWhileCheckout()[pri:14, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:34:11 CST" name="setup" finished-at="2026-08-04T22:34:15 CST" duration-ms="4141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc15_PlaceOrderRegisterBeforeCheckout()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc15_PlaceOrderRegisterBeforeCheckout()[pri:15, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:34:15 CST" name="tc15_PlaceOrderRegisterBeforeCheckout" finished-at="2026-08-04T22:34:47 CST" duration-ms="32050" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc15_PlaceOrderRegisterBeforeCheckout -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:34:47 CST" name="afterMethod" finished-at="2026-08-04T22:34:48 CST" duration-ms="439" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc15_PlaceOrderRegisterBeforeCheckout status=SUCCESS method=DemoGuruTestCases.tc15_PlaceOrderRegisterBeforeCheckout()[pri:15, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:34:48 CST" name="setup" finished-at="2026-08-04T22:34:52 CST" duration-ms="4347" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc16_PlaceOrderLoginBeforeCheckout()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc16_PlaceOrderLoginBeforeCheckout()[pri:16, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:34:52 CST" name="tc16_PlaceOrderLoginBeforeCheckout" finished-at="2026-08-04T22:35:38 CST" duration-ms="46149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc16_PlaceOrderLoginBeforeCheckout -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:35:38 CST" name="afterMethod" finished-at="2026-08-04T22:35:39 CST" duration-ms="433" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc16_PlaceOrderLoginBeforeCheckout status=SUCCESS method=DemoGuruTestCases.tc16_PlaceOrderLoginBeforeCheckout()[pri:16, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:35:39 CST" name="setup" finished-at="2026-08-04T22:35:43 CST" duration-ms="3846" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc17_RemoveProductsFromCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc17_RemoveProductsFromCart()[pri:17, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:35:43 CST" name="tc17_RemoveProductsFromCart" finished-at="2026-08-04T22:35:49 CST" duration-ms="6564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc17_RemoveProductsFromCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:35:49 CST" name="afterMethod" finished-at="2026-08-04T22:35:50 CST" duration-ms="337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc17_RemoveProductsFromCart status=SUCCESS method=DemoGuruTestCases.tc17_RemoveProductsFromCart()[pri:17, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:35:50 CST" name="setup" finished-at="2026-08-04T22:35:54 CST" duration-ms="4517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc18_ViewCategoryProducts()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc18_ViewCategoryProducts()[pri:18, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:35:54 CST" name="tc18_ViewCategoryProducts" finished-at="2026-08-04T22:36:00 CST" duration-ms="5806" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc18_ViewCategoryProducts -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:00 CST" name="afterMethod" finished-at="2026-08-04T22:36:00 CST" duration-ms="384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc18_ViewCategoryProducts status=SUCCESS method=DemoGuruTestCases.tc18_ViewCategoryProducts()[pri:18, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:00 CST" name="setup" finished-at="2026-08-04T22:36:04 CST" duration-ms="3885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc19_ViewAndCartBrandProducts()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc19_ViewAndCartBrandProducts()[pri:19, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:04 CST" name="tc19_ViewAndCartBrandProducts" finished-at="2026-08-04T22:36:12 CST" duration-ms="7363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc19_ViewAndCartBrandProducts -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:12 CST" name="afterMethod" finished-at="2026-08-04T22:36:12 CST" duration-ms="360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc19_ViewAndCartBrandProducts status=SUCCESS method=DemoGuruTestCases.tc19_ViewAndCartBrandProducts()[pri:19, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:12 CST" name="setup" finished-at="2026-08-04T22:36:16 CST" duration-ms="4465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc20_SearchProductsAndVerifyCartAfterLogin()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc20_SearchProductsAndVerifyCartAfterLogin()[pri:20, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:16 CST" name="tc20_SearchProductsAndVerifyCartAfterLogin" finished-at="2026-08-04T22:36:37 CST" duration-ms="20504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc20_SearchProductsAndVerifyCartAfterLogin -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:37 CST" name="afterMethod" finished-at="2026-08-04T22:36:37 CST" duration-ms="336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc20_SearchProductsAndVerifyCartAfterLogin status=SUCCESS method=DemoGuruTestCases.tc20_SearchProductsAndVerifyCartAfterLogin()[pri:20, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:37 CST" name="setup" finished-at="2026-08-04T22:36:42 CST" duration-ms="4478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc21_AddReviewOnProduct()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc21_AddReviewOnProduct()[pri:21, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:42 CST" name="tc21_AddReviewOnProduct" finished-at="2026-08-04T22:36:48 CST" duration-ms="6166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc21_AddReviewOnProduct -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:48 CST" name="afterMethod" finished-at="2026-08-04T22:36:48 CST" duration-ms="345" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc21_AddReviewOnProduct status=SUCCESS method=DemoGuruTestCases.tc21_AddReviewOnProduct()[pri:21, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:48 CST" name="setup" finished-at="2026-08-04T22:36:53 CST" duration-ms="4322" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc22_AddToCartFromRecommendedItems()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc22_AddToCartFromRecommendedItems()[pri:22, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:53 CST" name="tc22_AddToCartFromRecommendedItems" finished-at="2026-08-04T22:36:55 CST" duration-ms="2924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc22_AddToCartFromRecommendedItems -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:55 CST" name="afterMethod" finished-at="2026-08-04T22:36:56 CST" duration-ms="342" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc22_AddToCartFromRecommendedItems status=SUCCESS method=DemoGuruTestCases.tc22_AddToCartFromRecommendedItems()[pri:22, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:36:56 CST" name="setup" finished-at="2026-08-04T22:37:00 CST" duration-ms="4310" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc23_VerifyAddressDetailsInCheckoutPage()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc23_VerifyAddressDetailsInCheckoutPage()[pri:23, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:37:00 CST" name="tc23_VerifyAddressDetailsInCheckoutPage" finished-at="2026-08-04T22:37:27 CST" duration-ms="26431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc23_VerifyAddressDetailsInCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:37:27 CST" name="afterMethod" finished-at="2026-08-04T22:37:27 CST" duration-ms="527" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc23_VerifyAddressDetailsInCheckoutPage status=SUCCESS method=DemoGuruTestCases.tc23_VerifyAddressDetailsInCheckoutPage()[pri:23, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:37:27 CST" name="setup" finished-at="2026-08-04T22:37:32 CST" duration-ms="4771" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc24_DownloadInvoiceAfterPurchaseOrder()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc24_DownloadInvoiceAfterPurchaseOrder()[pri:24, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:37:32 CST" name="tc24_DownloadInvoiceAfterPurchaseOrder" finished-at="2026-08-04T22:38:11 CST" duration-ms="39263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc24_DownloadInvoiceAfterPurchaseOrder -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:11 CST" name="afterMethod" finished-at="2026-08-04T22:38:12 CST" duration-ms="468" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc24_DownloadInvoiceAfterPurchaseOrder status=SUCCESS method=DemoGuruTestCases.tc24_DownloadInvoiceAfterPurchaseOrder()[pri:24, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:12 CST" name="setup" finished-at="2026-08-04T22:38:17 CST" duration-ms="4964" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality()[pri:25, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:17 CST" name="tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality" finished-at="2026-08-04T22:38:17 CST" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:17 CST" name="afterMethod" finished-at="2026-08-04T22:38:17 CST" duration-ms="738" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality status=SUCCESS method=DemoGuruTestCases.tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality()[pri:25, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:17 CST" name="setup" finished-at="2026-08-04T22:38:22 CST" duration-ms="4466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void regression.DemoGuruTestCases.tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality()[pri:26, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:22 CST" name="tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality" finished-at="2026-08-04T22:38:22 CST" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:22 CST" name="afterMethod" finished-at="2026-08-04T22:38:23 CST" duration-ms="837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality status=SUCCESS method=DemoGuruTestCases.tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality()[pri:26, instance:regression.DemoGuruTestCases@35cabb2a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:regression.DemoGuruTestCases@35cabb2a]" started-at="2026-08-04T22:38:23 CST" name="afterTest" finished-at="2026-08-04T22:38:23 CST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- regression.DemoGuruTestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

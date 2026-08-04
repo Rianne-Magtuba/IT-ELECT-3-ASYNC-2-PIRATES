@@ -1,12 +1,17 @@
 package pageEvents;
 
+import java.time.Duration;
+
 import base.BaseTest;
 
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -88,24 +93,51 @@ public void searchForProduct(String productName) {
 }
 
 
-    public void hoverAndAddFirstProductToCart() {
-        logger.info("Hover over first product and click 'Add to cart'");
-        Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.xpath("(//div[@class='product-image-wrapper'])[1]"))).perform();
-        click(ProductsPageElements.FIRST_PRODUCT_ADD_TO_CART_BUTTON);
-    }
+   public void hoverAndAddFirstProductToCart() {
+    logInfo("Hover over first product and click 'Add to cart'");
+    
+    
+    WebElement firstProductWrapper = driver.findElement(By.xpath("(//div[@class='product-image-wrapper'])[1]"));
+    
+    
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", firstProductWrapper);
+    
+   
+    Actions actions = new Actions(driver);
+    actions.moveToElement(firstProductWrapper)
+           .pause(Duration.ofMillis(500)) // Holds the mouse there for half a second
+           .perform();
+    
+    
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ProductsPageElements.FIRST_PRODUCT_ADD_TO_CART)));
+    
+    
+    click(ProductsPageElements.FIRST_PRODUCT_ADD_TO_CART);
+}
 
     public void clickContinueShoppingButton() {
         logger.info("Click 'Continue Shopping' button");
         click(ProductsPageElements.CONTINUE_SHOPPING_BUTTON);
     }
 
-    public void hoverAndAddSecondProductToCart() {
-        logger.info("Hover over second product and click 'Add to cart'");
-        Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.xpath("(//div[@class='product-image-wrapper'])[2]"))).perform();
-        click(ProductsPageElements.SECOND_PRODUCT_ADD_TO_CART_BUTTON);
-    }
+  public void hoverAndAddSecondProductToCart() {
+    logInfo("Hover over second product and click 'Add to cart'");
+    Actions actions = new Actions(driver);
+    
+    
+    WebElement secondProduct = driver.findElement(By.xpath("(//div[@class='product-image-wrapper'])[2]"));
+     actions.moveToElement(secondProduct)
+           .pause(Duration.ofMillis(500)) // Holds the mouse there for half a second
+           .perform();
+
+     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+ wait.until(ExpectedConditions.elementToBeClickable(By.xpath(ProductsPageElements.SECOND_PRODUCT_ADD_TO_CART)));
+    actions.moveToElement(secondProduct).perform();
+    
+    // 3. Click using your scoped locator
+    click(ProductsPageElements.SECOND_PRODUCT_ADD_TO_CART);
+}
 
     public void clickViewCartButton() {
         logger.info("Click 'View Cart' button");

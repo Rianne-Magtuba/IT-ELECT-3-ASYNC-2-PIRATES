@@ -1,0 +1,210 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>26/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Aug 04 22:29:01 CST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>561 seconds (561522 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc17_RemoveProductsFromCart()'><b>tc17_RemoveProductsFromCart</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>6</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc22_AddToCartFromRecommendedItems()'><b>tc22_AddToCartFromRecommendedItems</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>2</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc23_VerifyAddressDetailsInCheckoutPage()'><b>tc23_VerifyAddressDetailsInCheckoutPage</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>26</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_04_LogoutUser()'><b>tc_04_LogoutUser</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>26</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc11_VerifySubscriptionInCartPage()'><b>tc11_VerifySubscriptionInCartPage</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>2</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_05_SignUpWithExistingEmail()'><b>tc_05_SignUpWithExistingEmail</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>5</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc16_PlaceOrderLoginBeforeCheckout()'><b>tc16_PlaceOrderLoginBeforeCheckout</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>46</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_01_registerUser()'><b>tc_01_registerUser</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>15</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_03_LoginWithIncorrectEmailAndPass()'><b>tc_03_LoginWithIncorrectEmailAndPass</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>23</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_09_SearchProduct()'><b>tc_09_SearchProduct</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>5</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_02_LoginSuccesfully()'><b>tc_02_LoginSuccesfully</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>25</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc21_AddReviewOnProduct()'><b>tc21_AddReviewOnProduct</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>6</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_06_ContactUsForm()'><b>tc_06_ContactUsForm</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>14</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_08_ProductPage()'><b>tc_08_ProductPage</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>5</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc24_DownloadInvoiceAfterPurchaseOrder()'><b>tc24_DownloadInvoiceAfterPurchaseOrder</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>39</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc19_ViewAndCartBrandProducts()'><b>tc19_ViewAndCartBrandProducts</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>7</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc15_PlaceOrderRegisterBeforeCheckout()'><b>tc15_PlaceOrderRegisterBeforeCheckout</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>32</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality()'><b>tc25_VerifyScrollUpUsingArrowButtonAndScrollDownFunctionality</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>0</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc12_AddProductsInCart()'><b>tc12_AddProductsInCart</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>7</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc10_VerifySubscriptionInHomePage()'><b>tc10_VerifySubscriptionInHomePage</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>0</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc13_VerifyProductQuantityInCart()'><b>tc13_VerifyProductQuantityInCart</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>6</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc_07_TestCasesPage()'><b>tc_07_TestCasesPage</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>3</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc20_SearchProductsAndVerifyCartAfterLogin()'><b>tc20_SearchProductsAndVerifyCartAfterLogin</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>20</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality()'><b>tc26_VerifyScrollUpWithoutArrowButtonAndScrollDownFunctionality</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>0</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc14_PlaceOrderRegisterWhileCheckout()'><b>tc14_PlaceOrderRegisterWhileCheckout</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>36</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+<tr>
+<td title='regression.DemoGuruTestCases.tc18_ViewCategoryProducts()'><b>tc18_ViewCategoryProducts</b><br>Test class: regression.DemoGuruTestCases</td>
+<td></td>
+<td>5</td>
+<td>regression.DemoGuruTestCases@35cabb2a</td></tr>
+</table><p>
+</body>
+</html>

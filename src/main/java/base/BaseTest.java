@@ -252,9 +252,24 @@ import utils.ElementFetch;
 			break;
 			
 		default:
-			WebDriverManager.chromedriver().setup();
-			driver= new ChromeDriver();
-			break;
+            logger.info("No valid browser passed. Defaulting to Chrome with AdBlocker.");
+            ChromeOptions defaultOptions = new ChromeOptions();
+            
+            // Standard safety arguments
+            defaultOptions.addArguments("--remote-allow-origins=*");
+            defaultOptions.addArguments("window-size=1980x1080");
+            
+            // Apply the Ad-Blocker rules here too!
+            defaultOptions.addArguments("--host-rules="
+                    + "MAP *googleads* 127.0.0.1, "
+                    + "MAP *doubleclick.net 127.0.0.1, "
+                    + "MAP *adservice.google.com 127.0.0.1, "
+                    + "MAP *googlesyndication.com 127.0.0.1");
+            
+            defaultOptions.setCapability("acceptInsecureCerts", true);
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver(defaultOptions);
+            break;
 		}
 	
 	}
