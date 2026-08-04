@@ -2,7 +2,6 @@
 
 An automated UI testing project developed as **Asynchronous Laboratory Activity #2** for **IT Elective 3**. This project uses **Selenium WebDriver** with **TestNG** to automate selected test cases from the Automation Exercise website.
 
----
 
 ## 📌 Project Information
 
@@ -16,15 +15,12 @@ https://automationexercise.com/
 **Official Test Cases:**
 https://automationexercise.com/test_cases
 
----
-
 ## 👥 Members
 
 * Rianne Magtuba
 * Rhaniel Dimaguila
 * Riyle Lhane Mapanoo
 
----
 
 ## 📖 Project Description
 
@@ -34,7 +30,6 @@ The automation suite executes multiple functional test cases provided by the Aut
 
 The project follows a structured Selenium TestNG framework and generates detailed HTML execution reports after every test run using Extent Reports. The generated report includes execution status, timestamps, screenshots, and step-by-step logs for each executed test case.
 
----
 
 ## 🚀 Technologies Used
 
@@ -46,7 +41,6 @@ The project follows a structured Selenium TestNG framework and generates detaile
 * Google Chrome
 * uBlock Origin (recommended to minimize advertisements during test execution)
 
----
 
 ## ▶️ Running the Test Project
 
@@ -58,7 +52,6 @@ Run the entire TestNG suite:
 mvn test -DsuiteFile=testng.xml
 ```
 
----
 
 ### Method 2 — Using Visual Studio Code
 
@@ -77,7 +70,6 @@ src
 4. Select **Run Tests**.
 5. Wait for all test cases to finish executing.
 
----
 
 ## 📊 Test Reports
 
@@ -106,7 +98,6 @@ The report contains:
 - 📷 Screenshots captured during test execution
 - 📊 Interactive Extent Report dashboard
 
----
 
 ##
 
